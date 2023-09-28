@@ -1,0 +1,10 @@
+.test-text::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -25px;
+    width: 28px;
+    height: 28px;
+    background-color: #fff;
+    clip-path: polygon(0 0, 0 100%, 100% 100%);
+}

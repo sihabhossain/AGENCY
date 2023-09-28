@@ -1,0 +1,33 @@
+.scrolling-marquee {
+    white-space: nowrap;
+    display: inline-block;
+    animation: campoutscrollingmarqueeReverse 6s linear infinite
+}
+
+.scrolling-marquee {
+    animation: campoutscrollingmarquee 6s linear infinite
+}
+
+@keyframes campoutscrollingmarquee {
+    0% {
+        transform: translate3d(0, 0, 0)
+    }
+
+    100% {
+        transform: translate3d(-50%, 0, 0)
+    }
+}
+
+@keyframes campoutscrollingmarqueeReverse {
+    0% {
+        transform: translate3d(-50%, 0, 0)
+    }
+
+    100% {
+        transform: translate3d(0%, 0, 0)
+    }
+}
+
+.scrolling-marquee {
+    animation-duration: 20s
+}

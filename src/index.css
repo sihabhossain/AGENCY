@@ -1,0 +1,102 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700;800;900;1000&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Mulish", sans-serif;
+}
+
+/* swiper js coustomize  */
+.swiper-pagination-bullet {
+  width: 30px !important;
+  height: 4px !important;
+  background: white !important;
+  border-radius: 0px !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #ff497c !important;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 50px !important;
+}
+
+/* if need this overlay top of the banner image just uncomment it */
+
+/* .overlay::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #1f2732;
+    opacity: 0.3;
+} */
+
+/* image hover effects */
+.imageHover figure {
+  position: relative;
+  overflow: hidden;
+}
+.imageHover figure::before {
+  position: absolute;
+  top: 0;
+  left: -95%;
+  z-index: 2;
+  display: block;
+  content: "";
+  width: 50%;
+  height: 100%;
+  background: -webkit-linear-gradient(
+    left,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 100%
+  );
+  -webkit-transform: skewX(-25deg);
+  transform: skewX(-25deg);
+}
+.imageHover figure:hover::before {
+  -webkit-animation: shine 0.75s;
+  animation: shine 0.75s;
+}
+@-webkit-keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+@keyframes shine {
+  100% {
+    left: 125%;
+  }
+}
+
+/* .iconHover:hover .contactIcon {
+  transform: rotateY(180deg);
+  background: #ff497c
+} */
+.contactIcon{
+  transition: all 0.5s;
+}
+
+.contactIcon:hover .iconHover {
+  transform: rotateY(180deg);
+  background: #ff497c
+}
+:focus-visible {
+  outline: 0.2px solid #ff497c;
+  outline-offset: -1px;
+}

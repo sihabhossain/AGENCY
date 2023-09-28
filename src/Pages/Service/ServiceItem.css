@@ -1,0 +1,31 @@
+.serviceItem{
+    transition: all linear .3s;
+}
+.infoText{
+    visibility: hidden;
+    transition: all linear .3s;
+    margin-top: 50px;
+}
+.infoTitle{
+    transition: all linear .3s;
+}
+.serviceItem:hover .infoTitle{
+    background: white;
+}
+.infoTitle h4{
+    transition: all linear .3s;
+}
+.serviceItem:hover .infoTitle h4{
+    color: #282b2d;
+}
+.serviceItem:hover .infoText{
+    visibility: visible;
+    margin-top: 0px;
+    
+}
+.circle{
+    transition: all linear .3s;
+}
+.serviceItem:hover .circle{
+    background: #282b2d;
+}
